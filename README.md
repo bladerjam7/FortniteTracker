@@ -17,14 +17,14 @@ Fortnite tracker is a multi-utility app that allows the user to have access to d
 ## User Interface Mocks
 
 <details> 
- <summary> <b>Open Splash and News Tab</b> </summary>
+ <summary><b>Open Splash and News Tab</b> </summary>
    <p>
 <img  width="200" src="https://user-images.githubusercontent.com/41648600/56452596-5b095980-6300-11e9-9136-77a8d77557ba.PNG"><img  width="200" src="https://user-images.githubusercontent.com/41648600/56452675-cf90c800-6301-11e9-832d-91ff2ddd6ba3.PNG">
  </p>
  </details>
 
 <details>
- <summary> <b>Tracker Tab</b> </summary>
+ <summary><b>Tracker Tab</b> </summary>
  <p>
   <img width="200" src="https://user-images.githubusercontent.com/41648600/56452665-cef83180-6301-11e9-865e-5d1dabe54282.PNG"><img width="200" src="https://user-images.githubusercontent.com/41648600/56452666-cef83180-6301-11e9-8347-c5fad8517596.PNG">
  </p>
