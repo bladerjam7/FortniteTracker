@@ -1,4 +1,4 @@
-# Fortnite Tracker
+# Fortnite Tracker App
 ----
 ## Description
 
