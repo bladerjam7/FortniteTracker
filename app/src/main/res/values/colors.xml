@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6A1B9A</color>
+    <color name="colorPrimaryDark">#4A148C</color>
+    <color name="colorAccent">#00BCD4</color>
+    <color name="trackerGameType">#6A1B9A</color>
+    <color name="backgrounLight">#D1C4E9</color>
+    <color name="gold_mini">#FFC400</color>
+    <color name="white">#ffff</color>
+    <color name="background_tint_alpha_70">#70000000</color>
+</resources>

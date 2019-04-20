@@ -1,0 +1,38 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="sub_fab_margin">23dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="tracker_text_size">20sp</dimen>
+    <dimen name="tracker_margin_score">40dp</dimen>
+    <dimen name="card_elevation">8dp</dimen>
+    <dimen name="daily_store">50sp</dimen>
+    <dimen name="tracker_titles">30sp</dimen>
+    <dimen name="app_bar_height">200dp</dimen>
+    <dimen name="item_width">200dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="challenge_week_menu_width">200dp</dimen>
+    <dimen name="challenge_week_menu_item_height">50dp</dimen>
+    <dimen name="challenge_week_menu_text_size">20sp</dimen>
+    <dimen name="default_elevation">8dp</dimen>
+
+    <!--
+Refer to App Widget Documentation for margin information
+http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
+    -->
+    <dimen name="widget_margin">8dp</dimen>
+
+    <!--Widget dimen-->
+    <dimen name="news_image_layout">75dp</dimen>
+    <dimen name="news_text_size_title">23sp</dimen>
+    <dimen name="news_text_size_body">15sp</dimen>
+    <dimen name="message_elevation">6dp</dimen>
+    <dimen name="default_padding_8">8dp</dimen>
+    <dimen name="message_username_frame">7dp</dimen>
+    <dimen name="username_et_margin">20dp</dimen>
+    <dimen name="enter_username">20sp</dimen>
+    <dimen name="username_margin">8dp</dimen>
+    <dimen name="message_margin">8dp</dimen>
+</resources>

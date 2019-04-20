@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/challenge_checkbox"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/backgrounLight">
+
+    <FrameLayout
+        android:id="@+id/challenge_finished"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:background="#70000000"
+        android:elevation="2dp"></FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_b_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:contentDescription="@string/small_battle_star"
+            android:id="@+id/im_b_star"
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:src="@drawable/fortnite_star" />
+
+        <TextView
+            android:id="@+id/tv_stars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/number_of_stars_default"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_challenge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_toStartOf="@+id/tv_total"
+        android:layout_toEndOf="@+id/ll_b_star"
+        android:text="@string/challenge_default"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/number_total_default"
+        android:textSize="15dp" />
+
+
+</RelativeLayout>

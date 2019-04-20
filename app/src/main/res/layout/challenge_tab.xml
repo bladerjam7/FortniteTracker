@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/intro_challenge_banner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="100dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:contentDescription="@string/battle_star_background"
+                android:id="@+id/imageView_big"
+                android:layout_width="wrap_content"
+                android:layout_height="296dp"
+                android:src="@drawable/fortnite_star"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/hint_select_challenge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="@string/select_challenge"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tracker_text_size"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/battle_star_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:elevation="8dp"
+                android:orientation="horizontal"
+                android:visibility="invisible"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:contentDescription="@string/battle_star_banner"
+                    android:id="@+id/imageView"
+                    android:layout_width="158dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/fortnite_star"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/week_banner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="32dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/challenge_listView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/battle_star_image"></ListView>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <View
+        android:id="@+id/background_tint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#50000000"
+        android:visibility="gone" />
+
+        <io.github.yavski.fabspeeddial.FabSpeedDial
+            android:contentDescription="@string/fab_content_description_portrait"
+            android:id="@+id/fab_speed_dial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            app:fabBackgroundTint="@color/colorPrimary"
+            app:fabDrawable="@drawable/ic_reorder_white_36dp"
+            app:fabGravity="bottom_end"
+            app:fabMenu="@menu/menu_home"
+            app:miniFabBackgroundTint="@color/colorPrimary"
+            app:miniFabDrawableTint="@color/gold_mini"
+            app:miniFabTitleTextColor="@color/colorPrimary" />
+
+</FrameLayout>

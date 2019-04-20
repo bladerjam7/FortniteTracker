@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="#70000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:elevation="8dp"
+        android:layout_margin="16dp">
+        <TextView
+            android:id="@+id/tv_news_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/default_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/news_text_size_title"/>
+
+        <TextView
+            android:id="@+id/tv_news_body_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/default_body"
+            android:textColor="@color/white"
+            android:textSize="@dimen/news_text_size_body"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:contentDescription="@string/image_background_holder"
+        android:id="@+id/image_news_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fortnite_star"
+        android:scaleType="centerCrop"
+        android:alpha="0.4"/>
+
+</RelativeLayout>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Background Tint-->
+    <View
+        android:id="@+id/background_tint_challenge"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#60000000"
+        android:visibility="gone"
+        android:elevation="2dp">
+
+    </View>
+
+        <ListView
+            android:id="@+id/challenge_listView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="60dp"
+            android:layout_marginStart="60dp"/>
+
+    <!--Battle Star Image and Text-->
+    <LinearLayout
+        android:id="@+id/intro_challenge_banner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:contentDescription="@string/battle_star_background"
+            android:id="@+id/imageView_big"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:src="@drawable/fortnite_star"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/hint_select_challenge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="@string/select_challenge_landscape"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tracker_text_size"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Week Menu -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="5dp"
+            >
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true">
+
+
+                <LinearLayout
+                    android:id="@+id/week_menu_frame"
+                    android:layout_width="@dimen/challenge_week_menu_width"
+                    android:layout_height="wrap_content"
+                    android:elevation="@dimen/default_elevation"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_week_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/challenge_week_menu_item_height"
+                        android:background="@drawable/border2"
+                        android:gravity="center"
+                        android:text="@string/week_1"
+                        android:textSize="@dimen/challenge_week_menu_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_week_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/challenge_week_menu_item_height"
+                        android:background="@drawable/border2"
+                        android:gravity="center"
+                        android:text="@string/week_2"
+                        android:textSize="@dimen/challenge_week_menu_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_week_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/challenge_week_menu_item_height"
+                        android:background="@drawable/border2"
+                        android:gravity="center"
+                        android:text="@string/week_3"
+                        android:textSize="@dimen/challenge_week_menu_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_week_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/challenge_week_menu_item_height"
+                        android:background="@drawable/border2"
+                        android:gravity="center"
+                        android:text="@string/week_4"
+                        android:textSize="@dimen/challenge_week_menu_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_week_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/challenge_week_menu_item_height"
+                        android:background="@drawable/border2"
+                        android:gravity="center"
+                        android:text="@string/week_5"
+                        android:textSize="@dimen/challenge_week_menu_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_week_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/challenge_week_menu_item_height"
+                        android:background="@drawable/border2"
+                        android:gravity="center"
+                        android:text="@string/week_6"
+                        android:textSize="@dimen/challenge_week_menu_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_week_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/challenge_week_menu_item_height"
+                        android:background="@drawable/border2"
+                        android:gravity="center"
+                        android:text="@string/week_7"
+                        android:textSize="@dimen/challenge_week_menu_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_week_8"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/challenge_week_menu_item_height"
+                        android:background="@drawable/border2"
+                        android:gravity="center"
+                        android:text="@string/week_8"
+                        android:textSize="@dimen/challenge_week_menu_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_week_9"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/challenge_week_menu_item_height"
+                        android:background="@drawable/border2"
+                        android:gravity="center"
+                        android:text="@string/week_9"
+                        android:textSize="@dimen/challenge_week_menu_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_week_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/challenge_week_menu_item_height"
+                        android:background="@drawable/border2"
+                        android:gravity="center"
+                        android:text="@string/week_10"
+                        android:textSize="@dimen/challenge_week_menu_text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+
+
+    <!--Floating Action Button-->
+    <android.support.design.widget.FloatingActionButton
+        android:contentDescription="@string/fab_content_description_landscape"
+        android:id="@+id/week_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:backgroundTint="@color/colorPrimary"
+        android:clickable="true"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_reorder_white_36dp"
+        android:focusable="true"
+        app:borderWidth = "0dp"/>
+
+
+</FrameLayout>

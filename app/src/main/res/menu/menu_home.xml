@@ -1,0 +1,65 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:contentDescription="@string/sub_fab_content_description_week_1"
+        android:id="@+id/week_1_challenge"
+        android:icon="@drawable/ic_grade_white_36dp"
+        android:title="@string/week_1" />
+
+    <item
+        android:contentDescription="@string/sub_fab_content_description_week_2"
+        android:id="@+id/week_2_challenge"
+        android:icon="@drawable/ic_grade_white_36dp"
+        android:title="@string/week_2" />
+
+    <item
+        android:contentDescription="@string/sub_fab_content_description_week_3"
+        android:id="@+id/week_3_challenge"
+        android:icon="@drawable/ic_grade_white_36dp"
+        android:title="@string/week_3" />
+    <item
+        android:contentDescription="@string/sub_fab_content_description_week_4"
+        android:id="@+id/week_4_challenge"
+        android:icon="@drawable/ic_grade_white_36dp"
+        android:title="@string/week_4" />
+
+    <item
+        android:contentDescription="@string/sub_fab_content_description_week_5"
+        android:id="@+id/week_5_challenge"
+        android:icon="@drawable/ic_grade_white_36dp"
+        android:title="@string/week_5" />
+
+    <item
+        android:contentDescription="@string/sub_fab_content_description_week_6"
+        android:id="@+id/week_6_challenge"
+        android:icon="@drawable/ic_grade_white_36dp"
+        android:title="@string/week_6" />
+
+    <item
+        android:contentDescription="@string/sub_fab_content_description_week_7"
+        android:id="@+id/week_7_challenge"
+        android:icon="@drawable/ic_grade_white_36dp"
+        android:title="@string/week_7" />
+
+    <item
+        android:contentDescription="@string/sub_fab_content_description_week_8"
+        android:id="@+id/week_8_challenge"
+        android:icon="@drawable/ic_grade_white_36dp"
+        android:title="@string/week_8" />
+
+    <item
+        android:contentDescription="@string/sub_fab_content_description_week_9"
+        android:id="@+id/week_9_challenge"
+        android:icon="@drawable/ic_grade_white_36dp"
+        android:title="@string/week_9" />
+
+    <item
+        android:contentDescription="@string/sub_fab_content_description_week_10"
+        android:id="@+id/week_10_challenge"
+        android:icon="@drawable/ic_grade_white_36dp"
+        android:title="@string/week_10" />
+
+
+
+
+</menu>

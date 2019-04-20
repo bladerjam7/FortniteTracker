@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "822517726436",
+    "firebase_url": "https://fortnite-tracker-457c2.firebaseio.com",
+    "project_id": "fortnite-tracker-457c2",
+    "storage_bucket": "fortnite-tracker-457c2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822517726436:android:9bba5f5940d78631",
+        "android_client_info": {
+          "package_name": "com.example.android.fortnitetracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "822517726436-csvc4g85afug4fs4ak6ns0qqe6rnjqng.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP0rEntReV4IKL-8sEXTXndOGLZ5gTvzE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
