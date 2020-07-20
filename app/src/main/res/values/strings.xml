@@ -103,10 +103,11 @@
     <string name="number_10">10</string>
 
     <!--API URLS-->
+    <string name="api_key">rapidapi-key=1c10cbfcd7msh5e4421ba5337b7cp169105jsned1029083419</string>
     <string name="challenge_url">https://fortnite-public-api.theapinetwork.com/prod09/challenges/get?season=current</string>
-    <string name="news_url">https://fortnite-public-api.theapinetwork.com/prod09/br_motd/get?language=en</string>
-    <string name="store_url">https://fortnite-public-api.theapinetwork.com/prod09/store/get?language=en</string>
-    <string name="tracker_id_url">https://fortnite-public-api.theapinetwork.com/prod09/users/id?username=</string>
+    <string name="news_url">https://fortnite-api.p.rapidapi.com/brnews/en</string>
+    <string name="store_url">https://fortnite-api.theapinetwork.com/store/get</string>
+    <string name="tracker_id_url">https://fortnite-api.p.rapidapi.com/stats/</string>
     <string name="tracker_username_url">https://fortnite-public-api.theapinetwork.com/prod09/users/public/br_stats_v2?user_id=</string>
 
 
@@ -115,7 +116,7 @@
     <string name="entries">entries</string>
     <string name="title">title</string>
     <string name="body">body</string>
-    <string name="image">image</string>
+    <string name="image">tileImage</string>
 
     <string name="items">items</string>
     <string name="item">item</string>
@@ -161,6 +162,13 @@
     <string name="week_challeges_banner">Week %1$1s Challenges</string>
     <string name="week">week</string>
     <string name="error">Error</string>
+    <string name="lifetime">lifetime</string>
+    <string name="all">all</string>
+    <string name="subgameinfo">subgameinfo</string>
+    <string name="battleroyalenews">battleroyalenews</string>
+    <string name="news">news</string>
+    <string name="motds">motds</string>
+    <string name="creativenews">creativenews</string>
 
 
 </resources>

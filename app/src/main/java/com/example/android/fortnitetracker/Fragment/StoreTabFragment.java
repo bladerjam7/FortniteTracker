@@ -65,7 +65,7 @@ public class StoreTabFragment extends Fragment {
                         try {
 
 
-                            JSONArray jsonArray = response.getJSONArray(getString(R.string.items));
+                            JSONArray jsonArray = response.getJSONArray(getString(R.string.data));
 
                             for(int i = 0; i < jsonArray.length(); i++){
                                 JSONObject items = jsonArray.getJSONObject(i);

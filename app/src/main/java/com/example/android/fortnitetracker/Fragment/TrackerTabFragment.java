@@ -21,6 +21,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -36,6 +37,8 @@ import org.w3c.dom.Text;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.zip.Inflater;
 
 
@@ -63,6 +66,8 @@ public class TrackerTabFragment extends Fragment {
         View view = inflater.inflate(R.layout.tracker_tab, container, false);
 
         editTextView = (TextView) view.findViewById(R.id.search_EditText);
+
+
         searchButton =  (Button) view.findViewById(R.id.search_button);
         statsLL = (GridLayout) view.findViewById(R.id.display_stats);
         fortnitePicture = (ImageView) view.findViewById(R.id.iv_fortnite);
@@ -91,7 +96,7 @@ public class TrackerTabFragment extends Fragment {
             usernameExtract = savedInstanceState.getString(getString(R.string.username));
 
             if (usernameExtract != "") {
-                jsonParseUsername(usernameExtract);
+                jsonParseId(usernameExtract);
                 fortnitePicture.setVisibility(View.GONE);
                 statsLL.setVisibility(View.VISIBLE);
             }
@@ -104,10 +109,12 @@ public class TrackerTabFragment extends Fragment {
             public void onClick(View v) {
                 fortnitePicture.setVisibility(View.GONE);
                 usernameExtract = editTextView.getText().toString();
+
+                usernameExtract.replaceAll(" ", "&");
                 
                 closeKeyboard();
 
-                jsonParseUsername(usernameExtract);
+                jsonParseId(usernameExtract);
                 statsLL.setVisibility(View.VISIBLE);
 
 
@@ -126,7 +133,7 @@ public class TrackerTabFragment extends Fragment {
         imm.hideSoftInputFromWindow(getView().getWindowToken(), 0);
     }
 
-    private void jsonParseUsername(String usernameExtract) {
+    /*private void jsonParseUsername(String usernameExtract) {
         String url = getString(R.string.tracker_id_url) + usernameExtract;
 
         final JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
@@ -148,10 +155,10 @@ public class TrackerTabFragment extends Fragment {
                     }
         });
         mQueue.add(request);
-    }
+    }*/
 
     private void jsonParseId(String uid) {
-        String url = getString(R.string.tracker_username_url) + uid;
+        String url = getString(R.string.tracker_id_url) + uid + "?" + getString(R.string.api_key);
 
         final JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
@@ -159,46 +166,43 @@ public class TrackerTabFragment extends Fragment {
                     public void onResponse(JSONObject response) {
                         try {
 
-                            JSONObject data = response.getJSONObject(getString(R.string.data));
-                            JSONObject keyboardMouse = data.getJSONObject(getString(R.string.keyboardmouse));
+                            JSONObject lifetime = response.getJSONObject(getString(R.string.lifetime));
+                            JSONObject all = lifetime.getJSONObject(getString(R.string.all));
 
                             // *****************   Duo Stats  ***************************************
 
-                            JSONObject defaultDuo = keyboardMouse.getJSONObject(getString(R.string.defaultduo));
-                            JSONObject dDefault = defaultDuo.getJSONObject(getString(R.string.default_string));
-                            int duoTop12 = dDefault.getInt(getString(R.string.placetop12));
-                            int duoTop5 = dDefault.getInt(getString(R.string.placetop5));
-                            int duoTop1 = dDefault.getInt(getString(R.string.placetop1));
-                            int duoScore = dDefault.getInt(getString(R.string.lowercase_score));
-                            int duoMatchesPlayed = dDefault.getInt(getString(R.string.lowercase_matchesplayed));
-                            int duoKills = dDefault.getInt(getString(R.string.lowercase_kills));
+                            JSONObject defaultDuo = all.getJSONObject(getString(R.string.defaultduo));
+                            int duoTop12 = defaultDuo.getInt(getString(R.string.placetop12));
+                            int duoTop5 = defaultDuo.getInt(getString(R.string.placetop5));
+                            int duoTop1 = defaultDuo.getInt(getString(R.string.placetop1));
+                            int duoScore = defaultDuo.getInt(getString(R.string.lowercase_score));
+                            int duoMatchesPlayed = defaultDuo.getInt(getString(R.string.lowercase_matchesplayed));
+                            int duoKills = defaultDuo.getInt(getString(R.string.lowercase_kills));
 
                             // **********************************************************************
 
                             // *****************   Squad Stats  *************************************
 
 
-                            JSONObject defaultSquad = keyboardMouse.getJSONObject(getString(R.string.defaultsquad));
-                            JSONObject sqDefault = defaultSquad.getJSONObject(getString(R.string.default_string));
-                            int sqTop6 = sqDefault.getInt(getString(R.string.placetop6));
-                            int sqTop3 = sqDefault.getInt(getString(R.string.placetop3));
-                            int sqTop1 = sqDefault.getInt(getString(R.string.placetop1));
-                            int sqScore = sqDefault.getInt(getString(R.string.lowercase_score));
-                            int sqMatchesPlayed = sqDefault.getInt(getString(R.string.lowercase_matchesplayed));
-                            int sqKills = sqDefault.getInt(getString(R.string.lowercase_kills));
+                            JSONObject defaultSquad = all.getJSONObject(getString(R.string.defaultsquad));
+                            int sqTop6 = defaultSquad.getInt(getString(R.string.placetop6));
+                            int sqTop3 = defaultSquad.getInt(getString(R.string.placetop3));
+                            int sqTop1 = defaultSquad.getInt(getString(R.string.placetop1));
+                            int sqScore = defaultSquad.getInt(getString(R.string.lowercase_score));
+                            int sqMatchesPlayed = defaultSquad.getInt(getString(R.string.lowercase_matchesplayed));
+                            int sqKills = defaultSquad.getInt(getString(R.string.lowercase_kills));
 
                             // **********************************************************************
 
                             // *****************   Solo Stats  **************************************
 
-                            JSONObject defaultSolo = keyboardMouse.getJSONObject(getString(R.string.defaultsolo));
-                            JSONObject sDefault = defaultSolo.getJSONObject(getString(R.string.default_string));
-                            int sTop25 = sDefault.getInt(getString(R.string.placetop25));
-                            int sTop10 = sDefault.getInt(getString(R.string.placetop10));
-                            int sTop1 = sDefault.getInt(getString(R.string.placetop1));
-                            int sScore = sDefault.getInt(getString(R.string.lowercase_score));
-                            int sMatchesPlayed = sDefault.getInt(getString(R.string.lowercase_matchesplayed));
-                            int sKills = sDefault.getInt(getString(R.string.lowercase_kills));
+                            JSONObject defaultSolo = all.getJSONObject(getString(R.string.defaultsolo));
+                            int sTop25 = defaultSolo.getInt(getString(R.string.placetop25));
+                            int sTop10 = defaultSolo.getInt(getString(R.string.placetop10));
+                            int sTop1 = defaultSolo.getInt(getString(R.string.placetop1));
+                            int sScore = defaultSolo.getInt(getString(R.string.lowercase_score));
+                            int sMatchesPlayed = defaultSolo.getInt(getString(R.string.lowercase_matchesplayed));
+                            int sKills = defaultSolo.getInt(getString(R.string.lowercase_kills));
 
                             // **********************************************************************
 
@@ -273,7 +277,16 @@ public class TrackerTabFragment extends Fragment {
                     public void onErrorResponse(VolleyError error) {
 
                     }
-        });
+        }) {
+           /* @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> headers = new HashMap<String, String>();
+                headers.put("x-rapidapi-host", "fortnite-api.p.rapidapi.com");
+                headers.put("x-rapidapi-key", "1c10cbfcd7msh5e4421ba5337b7cp169105jsned1029083419");
+                return headers;
+            }*/
+        };
+        mQueue = Volley.newRequestQueue(getContext());
         mQueue.add(request);
     }
 

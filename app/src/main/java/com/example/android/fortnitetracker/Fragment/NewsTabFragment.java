@@ -57,7 +57,7 @@ public class NewsTabFragment extends Fragment {
     }
 
     private void requestNewsJSON(final Context mContext) {
-        String newsURL = getString(R.string.news_url);
+        String newsURL = getString(R.string.news_url) + "?" + getString(R.string.api_key);
         final ArrayList<NewsObjects> newsList = new ArrayList<>();
 
         final JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, newsURL, null,
@@ -65,10 +65,26 @@ public class NewsTabFragment extends Fragment {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            JSONArray entries = response.getJSONArray(getString(R.string.entries));
+                            JSONObject entries = response.getJSONObject(getString(R.string.battleroyalenews));
+                            JSONObject news = entries.getJSONObject(getString(R.string.news));
+                            JSONArray motds = news.getJSONArray(getString(R.string.motds));
 
-                            for (int i = 0; i < entries.length(); i++){
-                                JSONObject items = entries.getJSONObject(i);
+                            for (int i = 0; i < motds.length(); i++){
+                                JSONObject items = motds.getJSONObject(i);
+
+                                String title = items.getString(getString(R.string.title));
+                                String body = items.getString(getString(R.string.body));
+                                String image = items.getString(getString(R.string.image));
+
+                                newsList.add(new NewsObjects(title, body, image));
+                            }
+
+                            JSONObject creativeEntries = response.getJSONObject(getString(R.string.creativenews));
+                            JSONObject cNews = creativeEntries.getJSONObject(getString(R.string.news));
+                            JSONArray cMotds = cNews.getJSONArray(getString(R.string.motds));
+
+                            for (int i = 0; i < cMotds.length(); i++){
+                                JSONObject items = cMotds.getJSONObject(i);
 
                                 String title = items.getString(getString(R.string.title));
                                 String body = items.getString(getString(R.string.body));
