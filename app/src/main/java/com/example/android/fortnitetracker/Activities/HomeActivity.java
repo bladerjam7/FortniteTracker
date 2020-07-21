@@ -125,10 +125,13 @@ public class HomeActivity extends AppCompatActivity {
                         });
                     } else {
 
+                        messageText.setVisibility(View.VISIBLE);
+                        sendBtn.setVisibility(View.VISIBLE);
                         messageFrame.setVisibility(View.VISIBLE);
                         messageFrame.setAnimation(animation_move_in);
                         messageFrame.getAnimation().start();
                         messageRV.setLayoutManager(new LinearLayoutManager(v.getContext()));
+
                     }
 
                 } else {
@@ -143,6 +146,8 @@ public class HomeActivity extends AppCompatActivity {
                         messageRV.setLayoutManager(null);
                     }
                     backgroundTint.setVisibility(View.GONE);
+                    messageText.setVisibility(View.GONE);
+                    sendBtn.setVisibility(View.GONE);
                 }
             }
         });

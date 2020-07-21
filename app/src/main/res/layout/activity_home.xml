@@ -67,6 +67,8 @@
         android:layout_margin="@dimen/fab_margin"
         android:backgroundTint="@color/colorAccent"
         android:src="@drawable/ic_messages"
+        android:elevation="10dp"
+        android:focusable="true"
         app:borderWidth="0dp" />
 
     <View
@@ -86,7 +88,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="65dp"
-        android:elevation="@dimen/message_username_frame"
+        app:elevation = "10dp"
         android:background="@color/colorPrimary"
         android:visibility="gone">
 

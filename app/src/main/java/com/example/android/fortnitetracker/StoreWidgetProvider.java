@@ -72,8 +72,11 @@ public class StoreWidgetProvider extends AppWidgetProvider {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            JSONArray newsEntries = response.getJSONArray(context.getString(R.string.entries));
-                            JSONObject firstEntry = newsEntries.getJSONObject(0);
+                            JSONObject entries = response.getJSONObject(context.getString(R.string.battleroyalenews));
+                            JSONObject news = entries.getJSONObject(context.getString(R.string.news));
+                            JSONArray motds = news.getJSONArray(context.getString(R.string.motds));
+
+                            JSONObject firstEntry = motds.getJSONObject(0);
 
                             String newsTitle = firstEntry.getString(context.getString(R.string.title));
                             String newsBody = firstEntry.getString(context.getString(R.string.body));

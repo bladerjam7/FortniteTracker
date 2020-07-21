@@ -15,8 +15,8 @@
         android:text="@string/username"
         android:textStyle="bold"
         android:textSize="@dimen/news_text_size_body"
-        android:layout_marginEnd="@dimen/username_margin"
-        android:textColor="#03A9F4"/>
+        android:textColor="#03A9F4"
+        android:layout_marginRight="@dimen/username_margin" />
 
     <TextView
         android:id="@+id/message_body"
